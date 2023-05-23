@@ -1,0 +1,233 @@
+.cards-container {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px auto 0px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* ALL CARDS  */
+  .flip-card {
+    width: 230px;
+    height: 230px;
+    border-radius: 20px;
+    perspective: 1000px;
+    background-color: transparent;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card:hover {
+    cursor: pointer;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* CONTENT STYLING */
+  .flip-card-front,
+  .flip-card-back {
+    display: grid;
+    place-items: center;
+  }
+  
+  .flip-card-front {
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+  }
+  
+  .flip-card-back {
+    background-color: #191e24;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 6px #f1c40f, 0 1px 3px #f1c40f;
+    border-radius: 10px;
+  }
+  
+  .flip-card-front img {
+    width: 95%;
+    background-size: cover;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+  }
+  
+  .flip-card-back ul {
+    color: #f1c40f;
+  }
+  
+
+  .navbar-nav .nav-item {
+    padding-right: 25px; 
+    padding-left: 25px;
+    font-size: large;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-nav .nav-item:hover {
+    background-color: #f1c40f;
+    border-radius: 15px;
+    transform: scale(.9);
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    
+  }
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left:60px;
+    /* transition: transform 0.2s ease-in-out; */
+    transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.circle:hover{
+    border:4px solid #ffffff;
+    transform: rotateY(180deg);
+}
+
+
+#about p{
+    padding:15px;
+    text-align: justify;
+}
+
+/* education */
+/* .col:hover{
+    border:2px solid rgb(241, 238, 238);
+   
+} */
+.col {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .col::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(241, 196, 15, 0.5);
+    transform: scale(0);
+    opacity: 1;
+    transition: transform .5s ease-in, opacity 0.6s ease-out;
+  }
+  
+  .col:hover::after {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  /* awards  */
+
+  .awards li{
+    transform: translate(0, 0);
+    transition: .5s;
+  transform: scale(.9);
+  font-size: larger;
+  }
+
+  .awards li:hover{
+    color: aliceblue;
+  text-shadow: 0 0 5px #ffee10;
+  transform: scale(1);
+  }
+
+  /* interests */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .image-container:hover .image {
+    transform: scale(1.2);
+  }
+
+  .image {
+    transition: transform 0.3s ease-out;
+  }
+
+  .overlay {
+    position:fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    backdrop-filter: blur(10px);
+    background-image: url(./images/photography.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .caption {
+    color: #fff;
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .edu {
+    border: 8px solid;
+    border-image: repeating-linear-gradient(135deg,#313131 0 10px) 8;
+    -webkit-mask: url(mask.svg) no-repeat center / contain;
+  mask: url(mask.svg) no-repeat center / contain;
+    -webkit-mask: conic-gradient(from 180deg at top 5px right 5px, #0000 90deg,#000 0)
+       var(--_i,200%) 0  /200% var(--_i,5px) border-box no-repeat,
+      conic-gradient(at bottom 5px left  5px,  #0000 90deg,#000 0)
+       0   var(--_i,200%)/var(--_i,5px) 200% border-box no-repeat,
+      linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s;
+  }
+  .edu:hover {
+    --_i: 100%;
+    color: #CC333F;
+    transition: .3s, -webkit-mask-size .3s .3s;
+  }
+  
+  #contact:hover::after {
+        content: "  WhatsApp";
+        background-color: green;
+        padding:3px;
+        border-radius: 5px;
+      }
