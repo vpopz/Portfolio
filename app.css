@@ -231,3 +231,20 @@
         padding:3px;
         border-radius: 5px;
       }
+
+.fabulous-link{
+  text-decoration: none;
+}   
+.fabulous-link:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-out;
+}
+
+.fabulous-link img {
+  transition: opacity 0.5s ease-in-out;
+  padding:5px;
+}
+
+.fabulous-link:hover img {
+  opacity: 0.8;
+}  
